@@ -40,22 +40,23 @@ class Contact extends Component {
                   className="fas fa-sort-down"
                   style={{ cursor: 'pointer' }}
                 />
-                <Link to={`contact/edit/${id}`}>
-                  <i
-                    className="fas fa-edit"
-                    style={{
-                      cursor: 'pointer',
-                      float: 'right',
-                      color: 'black',
-                      marginLeft: '1rem'
-                    }}
-                  />
-                </Link>
+                
                 <i
                   className="fas fa-times"
                   style={{ cursor: 'pointer', float: 'right', color: 'red' }}
                   onClick={this.onDeleteClick.bind(this, id, dispatch)}
                 />
+                    
+                    <Link to={`contact/edit/${id}`}>
+                  <i
+                    className="fas fa-edit"
+                    style={{
+                      cursor: 'pointer',
+                      color: 'black',
+                      marginLeft: '1rem'
+                    }}
+                  />
+                </Link>
               </h4>
               {showContactInfo ? (
                 <ul className="list-group">
